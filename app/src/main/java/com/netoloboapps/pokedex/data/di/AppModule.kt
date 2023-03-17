@@ -38,8 +38,8 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun providePokemonRepository(pokeApi: PokeApi) : PokemonRepository{
-        return PokemonRepositoryImpl(pokeApi)
-    }
+    fun providePokemonRepository(pokeApi: PokeApi): PokemonRepository =
+        PokemonRepositoryImpl(pokeApi)
+
 
 }

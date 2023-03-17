@@ -174,7 +174,6 @@ fun PokedexEntry(
                         dominantColor = color
                     }
                 },
-
                 contentDescription = entry.pokemonName,
                 modifier = Modifier
                     .size(120.dp)

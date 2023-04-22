@@ -63,7 +63,7 @@ fun SearchBar(
 
 @Preview(showBackground = true, backgroundColor = 0xFF6390F0)
 @Composable
-fun SearchaBarPreview(){
+fun SearchaBarPreview() {
     PokedexTheme {
         SearchBar()
     }

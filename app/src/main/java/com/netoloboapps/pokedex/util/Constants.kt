@@ -8,35 +8,35 @@ object Constants {
     const val PAGE_SIZE = 20
 
     val POKEDEX_ENTRIES_MOCK = listOf(
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-            PokedexListEntry(
-                pokemonName = "Blastoise",
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-                9
-            ),
-        )
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+        PokedexListEntry(
+            pokemonName = "Blastoise",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            9
+        ),
+    )
 }

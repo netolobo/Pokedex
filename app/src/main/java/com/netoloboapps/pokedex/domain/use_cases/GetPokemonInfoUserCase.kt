@@ -7,6 +7,7 @@ import javax.inject.Inject
 
 class GetPokemonInfoUserCase @Inject constructor(
     private val repository: PokemonRepository
-){
-    suspend operator fun invoke(pokemonName: String) : Resource<Pokemon> = repository.getPokemonInfo(pokemonName)
+) {
+    suspend operator fun invoke(pokemonName: String): Resource<Pokemon> =
+        repository.getPokemonInfo(pokemonName)
 }

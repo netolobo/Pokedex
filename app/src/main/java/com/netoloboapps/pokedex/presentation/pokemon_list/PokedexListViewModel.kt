@@ -11,7 +11,7 @@ import com.netoloboapps.pokedex.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.*
+import java.util.Locale
 import javax.inject.Inject
 
 @HiltViewModel
@@ -33,8 +33,8 @@ class PokedexListViewModel @Inject constructor(
         loadPokemonPaginated()
     }
 
-    fun clearCachedPokemonList(){
-        if(_cachedPokemonList.isNotEmpty()){
+    fun clearCachedPokemonList() {
+        if (_cachedPokemonList.isNotEmpty()) {
             isSearchStarting = false
         }
     }
@@ -82,7 +82,7 @@ class PokedexListViewModel @Inject constructor(
                         endReached = _curPage * PAGE_SIZE >= result.data!!.count
                     )
                     val pokedexEntries = result.data.results.mapIndexed { index, entry ->
-                        var number = if (entry.url.endsWith("/")) {
+                        val number = if (entry.url.endsWith("/")) {
                             entry.url.dropLast(1).takeLastWhile { it.isDigit() }
                         } else {
                             entry.url.takeLastWhile { it.isDigit() }
@@ -104,12 +104,14 @@ class PokedexListViewModel @Inject constructor(
                         pokemonList = updatedPokemonList
                     )
                 }
+
                 is Resource.Error -> {
                     _state.value = _state.value.copy(
                         loadError = result.message!!,
                         isLoading = false
                     )
                 }
+
                 else -> {
                     _state.value = _state.value.copy(
                         isLoading = true

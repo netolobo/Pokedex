@@ -10,6 +10,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PokemonDetailViewModel @Inject constructor(
     private val getPokemonInfoUserCase: GetPokemonInfoUserCase
-): ViewModel(){
-    suspend fun getPokemonInfo(pokemonName: String) : Resource<Pokemon> = getPokemonInfoUserCase(pokemonName)
+) : ViewModel() {
+    suspend fun getPokemonInfo(pokemonName: String): Resource<Pokemon> =
+        getPokemonInfoUserCase(pokemonName)
 }

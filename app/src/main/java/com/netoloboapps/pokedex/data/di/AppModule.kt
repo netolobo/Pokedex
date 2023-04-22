@@ -19,12 +19,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-
     @Singleton
     @Provides
     fun providePokemonApi(): PokeApi {
 
-        //Moshi config
         val moshi: Moshi = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())
             .build()
@@ -40,6 +38,5 @@ object AppModule {
     @Provides
     fun providePokemonRepository(pokeApi: PokeApi): PokemonRepository =
         PokemonRepositoryImpl(pokeApi)
-
 
 }

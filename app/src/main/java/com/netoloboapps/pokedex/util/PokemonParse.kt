@@ -7,7 +7,7 @@ import com.netoloboapps.pokedex.ui.theme.*
 import java.util.*
 
 fun parseTypeToColor(type: Type): Color {
-    return when(type.type.name.lowercase(Locale.ROOT)) {
+    return when (type.type.name.lowercase(Locale.ROOT)) {
         "normal" -> TypeNormal
         "fire" -> TypeFire
         "water" -> TypeWater
@@ -31,7 +31,7 @@ fun parseTypeToColor(type: Type): Color {
 }
 
 fun parseStatToColor(stat: Stat): Color {
-    return when(stat.stat.name.lowercase(Locale.ROOT)) {
+    return when (stat.stat.name.lowercase(Locale.ROOT)) {
         "hp" -> HPColor
         "attack" -> AtkColor
         "defense" -> DefColor
@@ -43,7 +43,7 @@ fun parseStatToColor(stat: Stat): Color {
 }
 
 fun parseStatToAbbr(stat: Stat): String {
-    return when(stat.stat.name.lowercase(Locale.ROOT)) {
+    return when (stat.stat.name.lowercase(Locale.ROOT)) {
         "hp" -> "HP"
         "attack" -> "Atk"
         "defense" -> "Def"

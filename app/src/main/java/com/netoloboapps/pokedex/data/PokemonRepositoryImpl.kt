@@ -10,13 +10,12 @@ import javax.inject.Inject
 
 class PokemonRepositoryImpl @Inject constructor(
     private val api: PokeApi,
-) : PokemonRepository{
-
+) : PokemonRepository {
 
     override suspend fun getPokemonList(limit: Int, offset: Int): Resource<PokemonList> {
         val response = try {
             api.getPokemonList(limit, offset)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             return Resource.Error("Error = ${e.message}")
         }
         return Resource.Success(response)
@@ -25,7 +24,7 @@ class PokemonRepositoryImpl @Inject constructor(
     override suspend fun getPokemonInfo(pokemonName: String): Resource<Pokemon> {
         val response = try {
             api.getPokemonInfo(pokemonName)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             return Resource.Error("Error = ${e.message}")
         }
         return Resource.Success(response)
